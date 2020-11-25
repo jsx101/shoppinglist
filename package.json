@@ -1,5 +1,6 @@
 {
   "name": "shoppinglist",
+  "productName": "ShoppingList",
   "version": "1.0.0",
   "description": "Making shopping list based on tutorial video",
   "main": "main.js",
@@ -16,6 +17,7 @@
     "electron": "^11.0.3"
   },
   "devDependencies": {
+    "electron": "^11.0.3",
     "electron-packager": "^15.1.0"
   }
 }
