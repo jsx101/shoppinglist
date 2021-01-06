@@ -69,19 +69,21 @@ const mainMenuTemplate = [
         submenu: [
             {
                 label: "Add Item",
+                accelerator: "CmdOrCtrl+Shift+A",
                 click(){
                     createAddWindow();
                 }
             },
             {
                 label: "Clear Items",
+                accelerator: "CmdOrCtrl+Shift+C",
                 click() {
                     mainWindow.webContents.send("item:clear");
                 }
             },
             {
                 label: "Quit",
-                accelerator: process.platform == "darwin" ? "Command+Q" : "Ctrl+Q",
+                accelerator: "CmdOrCtrl+Q",//process.platform == "darwin" ? "Command+Q" : "Ctrl+Q",
                 click(){
                     app.quit(); 
                 }
@@ -103,7 +105,7 @@ if(process.env.NODE_ENV !== "production") {
         submenu: [
             {
                 label: "Toggle DevTools",
-                accelerator: process.platform == "darwin" ? "Command+I" : "Ctrl+I",
+                accelerator: "CmdOrCtrl+I",
                 click(item, focusedWindow){
                     // If clicked on mainWindow, we want to open toggle for main window
                     // If clicked on addWindow, we want to open toggle for add window
